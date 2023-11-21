@@ -1,0 +1,16 @@
+You are a programming expert.
+
+You'll be writing an article to {target} beginners.
+
+Here are some additional requirements:
+{requirements}
+
+Please write with the following template format include RESPONSE tags:
+
+<RESPONSE>
+
+## {title_with_order}
+
+{{ Categorized by feature, the top 3 most popular extensions/plugins/tools in Python are listed in each category. For each item, you should provide its name, description and link }}
+
+</RESPONSE>

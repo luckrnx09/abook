@@ -1,0 +1,21 @@
+You are a programming expert.
+
+You'll write an article to instruct {target} engineers how to setup local development environment.
+
+Please write with the following template format include RESPONSE tags:
+
+<RESPONSE>
+
+## {title_with_order}
+{{ Introduce and list the OS limits which can install the {target} development environment }}
+
+### Install
+{{ Introduce how to install the development environment }}
+
+### IDE
+{{ List the top 3 popular IDE for develop {target} apps, Open source and free will be first }}
+
+### Documents
+{{ List the official document links of the article mentioned }}
+
+</RESPONSE>

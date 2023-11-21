@@ -1,0 +1,364 @@
+{
+  "title": "Python for Web Developers: A Practical Guide",
+  "source": "JavaScript",
+  "target": "Python",
+  "catalogs": [
+    {
+      "title": "Part 1: Python Basics",
+      "chapters": [
+        {
+          "title": "Chapter 1 - Environment Setup",
+          "articles": [
+            {
+              "title": "1. Python Installation",
+              "type": "environment",
+              "requirements": [
+                "Introduce how to install python on macOS and Windows"
+              ]
+            },
+            {
+              "title": "2. Hello World",
+              "type": "comparison",
+              "requirements": [
+                "Introduce the python program file suffixes and how to run them",
+                "Introduce the `print` function"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chapter 2 - Variables",
+          "articles": [
+            {
+              "title": "1. Variable Definition and Assignment",
+              "type": "comparison",
+              "requirements": [
+                "List all the reserved words in Python in a bullet-list"
+              ]
+            },
+            {
+              "title": "2. Type Conversion",
+              "type": "comparison",
+              "requirements": [
+                "Introduce all the basic type in Python"
+              ]
+            },
+            {
+              "title": "3. Arithmetic Operators",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "4. Variable Naming Rules",
+              "type": "comparison",
+              "requirements": [
+                "Introduce the naming rules for classes,functions,constants"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chapter 3 - Data Types",
+          "articles": [
+            {
+              "title": "1. Basic Data Types",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "2. List and Tuple Types",
+              "type": "comparison",
+              "requirements": [
+              ]
+            },
+            {
+              "title": "3. Dictionary Type",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "4. Set Type",
+              "type": "comparison",
+              "requirements": []
+            }
+          ]
+        },
+        {
+          "title": "Chapter 4 - Conditional Statements",
+          "articles": [
+            {
+              "title": "1. if Statement",
+              "type": "comparison",
+              "requirements": [
+                "Introduce the condition expression"
+              ]
+            },
+            {
+              "title": "2. Comparison Operators",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "3. Logical Operators",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "4. List Comprehension and Dictionary Comprehension",
+              "type": "comparison",
+              "requirements": []
+            }
+          ]
+        },
+        {
+          "title": "Chapter 5 - Loop Statements",
+          "articles": [
+            {
+              "title": "1. for Loop",
+              "type": "comparison",
+              "requirements": [
+                "Introduce `range` function and `enumerate` function"
+              ]
+            },
+            {
+              "title": "2. while Loop",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "3. break and continue",
+              "type": "comparison",
+              "requirements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Part 2: Python Intermediate",
+      "chapters": [
+        {
+          "title": "Chapter 6 - Functions",
+          "articles": [
+            {
+              "title": "1. Function Definition and Invocation",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "2. Anonymous Functions",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "4. Built-in Functions",
+              "type": "comparison",
+              "requirements": []
+            }
+          ]
+        },
+        {
+          "title": "Chapter 7 - Modules and Packages",
+          "articles": [
+            {
+              "title": "1. Module Import and Usage",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "2. Package Creation and Import",
+              "type": "comparison",
+              "requirements": []
+            }
+          ]
+        },
+        {
+          "title": "Chapter 8 - Built-in Modules",
+          "articles": [
+            {
+              "title": "1. datetime Module",
+              "type": "comparison",
+              "requirements": [
+                "Introduce the datetime conversions and computing operations"
+              ]
+            },
+            {
+              "title": "2. os Module",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "3. re Module",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "4. random Module",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "5. math Module",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "5. json Module",
+              "type": "comparison",
+              "requirements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Part 3: Python Advanced",
+      "chapters": [
+        {
+          "title": "Chapter 9 - File Operations",
+          "articles": [
+            {
+              "title": "1. File Reading and Writing",
+              "type": "comparison",
+              "requirements": [
+                "Always use the `utf-8` encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chapter 10 - Exception Handling",
+          "articles": [
+            {
+              "title": "1. try-except Statement",
+              "type": "comparison",
+              "requirements": [
+                "Introduce the multiple catch statements syntax",
+                "Introduce the finally statement"
+              ]
+            },
+            {
+              "title": "2. Custom Exceptions",
+              "type": "comparison",
+              "requirements": []
+            }
+          ]
+        },
+        {
+          "title": "Chapter 11 - Object-Oriented Programming",
+          "articles": [
+            {
+              "title": "1. Classes and Objects",
+              "type": "comparison",
+              "requirements": []
+            },
+            {
+              "title": "2. Properties and Methods",
+              "type": "comparison",
+              "requirements": [
+                "Introduce how to define the private members",
+                "Introduce the static property and static method"
+              ]
+            },
+            {
+              "title": "3. Inheritance and Polymorphism",
+              "type": "comparison",
+              "requirements": [
+                "Introduce the abstract class and method"
+              ]
+            },
+            {
+              "title": "4. Special Methods",
+              "type": "comparison",
+              "requirements": []
+            }
+          ]
+        },
+        {
+          "title": "Chapter 12 - Virtual Environments and Package Management",
+          "articles": [
+            {
+              "title": "1. Virtual Environment Creation and Activation",
+              "type": "comparison",
+              "requirements": [
+              ]
+            },
+            {
+              "title": "2. Package Installation and Uninstallation",
+              "type": "cli",
+              "requirements": [
+                "Introduce how to use the `pip` to manage the package"
+              ]
+            },
+            {
+              "title": "3. Package Version Freeze",
+              "type": "cli",
+              "requirements": [
+                "Introduce the requirements.txt",
+                "Compare the requirements.txt in Python and package.json in JavaScript"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Part 4: Project-based Practice",
+      "chapters": [
+        {
+          "title": "Chapter 13 - Building a Simple Command-Line Tool",
+          "articles": [
+            {
+              "title": "1. File Viewer",
+              "type": "comparison",
+              "requirements": [
+                "Build a command line tool to view the file list using os module",
+                "The usage example: `python fv.py -l -a -h` to equals `ls -l -a -h` in shell"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chapter 14 - Web Development",
+          "articles": [
+            {
+              "title": "1. Book Store",
+              "type": "comparison",
+              "requirements": [
+                "Introduce FastAPI",
+                "Implement restful APIs for a book store",
+                "Using the Sqlalchemy as ORM framework",
+                "Keep it simple, only the basic CRUD APIs are required",
+                "Introduce how to test using Swagger"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chapter 15 - Automation and Scripting",
+          "articles": [
+            {
+              "title": "1. Hot on Github",
+              "type": "comparison",
+              "requirements": [
+                "Crawling the most popular projects recently in Github",
+                "Format it as JSON and save to file"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Chapter 16 - Popular 3rd-party Packages",
+          "articles":[
+            {
+              "title": "1. Packages",
+              "type": "resource",
+              "requirements": [
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

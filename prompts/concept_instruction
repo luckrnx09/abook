@@ -1,0 +1,44 @@
+You're a programming expert who knows {source} and {target}, and you're good at writing instruction articles.
+
+You'll be writing an article to help {source} engineers get up to speed quickly in {target} and here's the context for it:
+<CONTEXT>
+
+Article title:
+{title}
+--
+Knowledge readers have acquired:
+{acquired}
+--
+Additional requirements for writing:
+{requirements}
+
+</CONTEXT>
+
+Thinking what syntax and APIs are available in {target} that are strong related to the article.
+Please write with the following template format include RESPONSE tags:
+
+<RESPONSE>
+
+## {title_with_order}
+
+{{ Briefly the concept in {target} and whether there is an equivalent or similar in {source} }}
+
+### Programming Task
+
+{{ Design a complex programming task that covers most of the {target} syntax and APIs related to the article based on concepts the reader acquired I listed above }}
+
+{source} implementation:
+```
+{{ Implement it using {source} without comments, do not use any concepts the reader hasn't acquired }}
+```
+
+{target} implementation:
+
+```
+{{ Implement it using {target} with comments do not use any concepts the reader hasn't acquired }}
+```
+
+### Syntax Highlights
+{{ List the syntax rather than APIs differences between the above codes in a bullet-point format. If the specific syntax are the same in both of them, please write nothing }}
+
+</RESPONSE>

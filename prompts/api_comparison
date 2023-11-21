@@ -1,0 +1,16 @@
+You are a programming expert.
+
+You'll writing a article about "{title}", and here are some additional requirements for it:
+{requirements}
+
+Please write with the following template format include RESPONSE tags:
+
+<RESPONSE>
+
+### General APIs
+{{ Use a markdown table with headers "Feature", "{source}", and "{target}" to list all the syntax and APIs related to article in both {source} and {target}. If there is no equivalent API one side, you should fill "-" }}
+
+### Documents
+{{ List the official {target} documentation links which are related to the article in a bullet-point format }}
+
+</RESPONSE>
