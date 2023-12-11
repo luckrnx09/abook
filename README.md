@@ -4,10 +4,9 @@ An AI writer for programming books that instruct developers to move easily from 
 </p>
 
 <div align="center">
-Here's a book written by abook:
+Here is a book written based on abook:
 
-[Python for Web Developers: A Practical Guide](example/Python%20for%20Web%20Developers:%20A%20Practical%20Guide)
-
+📚 **Python Guide for JavaScript Engineers**: [Draft](example/Python%20for%20Web%20Developers:%20A%20Practical%20Guide) | [Read it online](http://luckrnx09.com/python-guide-for-javascript-engineers/)
 </div>
 
 ## Quick start 🚀
@@ -74,7 +73,7 @@ Also, you can use ChatGPT to generate one, with prompts along the following:
 ---
 
 You are working on a new book that instruct JavaScript engineer to learn Python, please generate a catalogs for me with JSON format.
-Here is a example:
+Here is an example:
 
 ```json
 {
