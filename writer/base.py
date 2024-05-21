@@ -1,10 +1,8 @@
 from abc import ABC, abstractmethod
-
+from schema.typing import Book
 
 class WritingContext:
-    def __init__(self, source: str, target: str, title: str, title_with_order: str,
-                 requirements: str,
-                 acquired: str):
+    def __init__(self, book: Book, section_id: str):
         self.source = source
         self.target = target
         self.title = title

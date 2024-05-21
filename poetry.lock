@@ -123,7 +123,7 @@ files = [
 [[package]]
 name = "anyio"
 version = "3.7.1"
-description = "High level compatibility layer for multiple asynchronous event loop implementations"
+¸description = "High level compatibility layer for multiple asynchronous event loop implementations"
 optional = false
 python-versions = ">=3.7"
 files = [

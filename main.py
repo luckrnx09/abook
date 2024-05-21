@@ -1,4 +1,4 @@
-from schema.metadata import create_book_from_json
+from schema.typing import create_book_from_json
 from dotenv import load_dotenv
 from writer.factory import create_writer
 import os

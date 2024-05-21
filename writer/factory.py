@@ -1,7 +1,7 @@
 from typing import  List
 from writer.comparison import ComparisonWriter
 from writer.base import BaseWriter, WritingContext
-from schema.metadata import Article
+from schema.typing import Article
 from writer.default import DefaultWriter
 from writer.cli import CommandLineWriter
 from writer.environment import EnvironmentWriter

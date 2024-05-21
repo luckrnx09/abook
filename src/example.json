@@ -1,0 +1,96 @@
+{
+    "id": "js-beginner-book",
+    "title": "JavaScript入门书",
+    "language": "JavaScript",
+    "author": "John Doe",
+    "chapters": [
+      {
+        "id": "chapter-1",
+        "title": "Introduction to JavaScript",
+        "articles": [
+          {
+            "id": "article-1",
+            "title": "Getting Started with JavaScript",
+            "slug": "getting-started",
+            "sections": [
+              {
+                "id": "section-1",
+                "title": "What is JavaScript?",
+                "prompt": "Write a brief description of JavaScript.",
+                "content": ""
+              },
+              {
+                "id": "section-2",
+                "title": "Setting Up the Development Environment",
+                "prompt": "Provide instructions on setting up the development environment for JavaScript.",
+                "content": ""
+              }
+            ]
+          },
+          {
+            "id": "article-2",
+            "title": "Variables and Data Types",
+            "slug": "variables-and-data-types",
+            "sections": [
+              {
+                "id": "section-3",
+                "title": "Declaring Variables",
+                "prompt": "Explain how to declare variables in JavaScript.",
+                "content": ""
+              },
+              {
+                "id": "section-4",
+                "title": "Primitive Data Types",
+                "prompt": "Discuss the primitive data types in JavaScript.",
+                "content": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chapter-2",
+        "title": "Control Flow and Loops",
+        "articles": [
+          {
+            "id": "article-3",
+            "title": "Conditional Statements",
+            "slug": "conditional-statements",
+            "sections": [
+              {
+                "id": "section-5",
+                "title": "If Statement",
+                "prompt": "Explain the usage of if statements in JavaScript.",
+                "content": ""
+              },
+              {
+                "id": "section-6",
+                "title": "Switch Statement",
+                "prompt": "Discuss how to use the switch statement in JavaScript.",
+                "content": ""
+              }
+            ]
+          },
+          {
+            "id": "article-4",
+            "title": "Loops",
+            "slug": "loops",
+            "sections": [
+              {
+                "id": "section-7",
+                "title": "For Loop",
+                "prompt": "Explain the syntax and usage of for loops in JavaScript.",
+                "content": ""
+              },
+              {
+                "id": "section-8",
+                "title": "While Loop",
+                "prompt": "Discuss the usage of the while loop in JavaScript.",
+                "content": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
