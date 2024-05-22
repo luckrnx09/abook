@@ -49,6 +49,50 @@
             ]
           }
         ]
+      },
+      {
+        "id": "chapter-1",
+        "title": "Introduction to JavaScript",
+        "articles": [
+          {
+            "id": "article-1",
+            "title": "Getting Started with JavaScript",
+            "slug": "getting-started",
+            "sections": [
+              {
+                "id": "section-1",
+                "title": "What is JavaScript?",
+                "prompt": "Write a brief description of JavaScript.",
+                "content": ""
+              },
+              {
+                "id": "section-2",
+                "title": "Setting Up the Development Environment",
+                "prompt": "Provide instructions on setting up the development environment for JavaScript.",
+                "content": ""
+              }
+            ]
+          },
+          {
+            "id": "article-2",
+            "title": "Variables and Data Types",
+            "slug": "variables-and-data-types",
+            "sections": [
+              {
+                "id": "section-3",
+                "title": "Declaring Variables",
+                "prompt": "Explain how to declare variables in JavaScript.",
+                "content": ""
+              },
+              {
+                "id": "section-4",
+                "title": "Primitive Data Types",
+                "prompt": "Discuss the primitive data types in JavaScript.",
+                "content": ""
+              }
+            ]
+          }
+        ]
       }
     ]
   }
