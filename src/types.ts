@@ -28,12 +28,12 @@ const BookSchema = z.object({
   chapters: z.array(ChapterSchema),
 });
 
-const DraftArticlesSchema = z.record(z.record(z.string()));
+const GeneratedArticlesSchema = z.record(z.record(z.string()));
 
 export {
   BookSchema,
   ChapterSchema,
   ArticleSchema,
   SectionSchema,
-  DraftArticlesSchema,
+  GeneratedArticlesSchema,
 };

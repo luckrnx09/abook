@@ -1,6 +1,7 @@
-import {initializeBook} from './meta';
+import {prepareBook} from './meta';
 
 const metaFile = process.cwd() + '/src/example.json';
 (async () => {
-  await initializeBook(metaFile);
+  const book = await prepareBook(metaFile);
+  console.log(book);
 })();
