@@ -1,8 +1,10 @@
 {
     "id": "js-beginner-book",
-    "title": "JavaScript入门书",
+    "title": "JavaScript 入门书",
     "language": "JavaScript",
     "author": "John Doe",
+    "summary": "这是一本 JavaScript 入门书",
+    "prompt": "使用文言文书写",
     "chapters": [
       {
         "id": "chapter-1",
@@ -42,50 +44,6 @@
                 "id": "section-4",
                 "title": "Primitive Data Types",
                 "prompt": "Discuss the primitive data types in JavaScript.",
-                "content": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "chapter-2",
-        "title": "Control Flow and Loops",
-        "articles": [
-          {
-            "id": "article-3",
-            "title": "Conditional Statements",
-            "slug": "conditional-statements",
-            "sections": [
-              {
-                "id": "section-5",
-                "title": "If Statement",
-                "prompt": "Explain the usage of if statements in JavaScript.",
-                "content": ""
-              },
-              {
-                "id": "section-6",
-                "title": "Switch Statement",
-                "prompt": "Discuss how to use the switch statement in JavaScript.",
-                "content": ""
-              }
-            ]
-          },
-          {
-            "id": "article-4",
-            "title": "Loops",
-            "slug": "loops",
-            "sections": [
-              {
-                "id": "section-7",
-                "title": "For Loop",
-                "prompt": "Explain the syntax and usage of for loops in JavaScript.",
-                "content": ""
-              },
-              {
-                "id": "section-8",
-                "title": "While Loop",
-                "prompt": "Discuss the usage of the while loop in JavaScript.",
                 "content": ""
               }
             ]
