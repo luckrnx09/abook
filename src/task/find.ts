@@ -1,7 +1,7 @@
 import {z} from 'zod';
 import {BookSchema, Task} from '../types';
 
-const hasGeneratedContent = (str: string | undefined) => {
+const hasValue = (str: string | undefined) => {
   return typeof str === 'string' && str.trim().length > 0;
 };
 
@@ -18,8 +18,8 @@ const findNextTask = (book: z.infer<typeof BookSchema>): Task | null => {
        */
       for (const section of article.sections) {
         const sectionIndex = article.sections.indexOf(section);
-        if (hasGeneratedContent(section.content)) {
-          if (!hasGeneratedContent(section.summary)) {
+        if (hasValue(section.content)) {
+          if (!hasValue(section.summary)) {
             return {
               type: 'section-summary',
               content: section.content as string,
@@ -42,7 +42,7 @@ const findNextTask = (book: z.infer<typeof BookSchema>): Task | null => {
           };
         }
       }
-      if (!hasGeneratedContent(article.summary)) {
+      if (!hasValue(article.summary)) {
         return {
           type: 'article-summary',
           summaries: {
@@ -52,7 +52,7 @@ const findNextTask = (book: z.infer<typeof BookSchema>): Task | null => {
         };
       }
     }
-    if (!hasGeneratedContent(chapter.summary)) {
+    if (!hasValue(chapter.summary)) {
       return {
         type: 'chapter-summary',
         summaries: {
