@@ -42,4 +42,23 @@ const start = async (book: z.infer<typeof BookSchema>) => {
   }
   logger.info('🎉 Congratulations! Book is finished');
 };
-export {start};
+
+const toMarkdown = (book: z.infer<typeof BookSchema>) => {
+  let markdown = `\n# ${book.title}\n${book.author}\n`;
+  book.chapters.forEach((chapter, chapterIndex) => {
+    markdown += `\n## ${chapterIndex + 1} - ${chapter.title}\n`;
+    chapter.articles.forEach((article, articleIndex) => {
+      markdown += `\n### ${chapterIndex + 1}.${articleIndex + 1} - ${
+        article.title
+      }\n`;
+      article.sections.forEach((section, sectionIndex) => {
+        markdown += `\n#### ${chapterIndex + 1}.${articleIndex + 1}.${
+          sectionIndex + 1
+        } - ${section.title}\n`;
+        markdown += `\n${section.content}\n`;
+      });
+    });
+  });
+  return markdown;
+};
+export {start, toMarkdown};

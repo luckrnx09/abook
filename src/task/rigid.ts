@@ -22,6 +22,7 @@ const getBookRigidPrompt = (
   ## Constraints:
   - Focus only on the given book information and user requirements in your writing.
   - Stick to the language specified by the user. If the language is not specified, use the english as default.
+  - Stick to output a markdown format and go in the <RESPONSE>real markdown content here</RESPONSE> tag. Do not return anything else.
   `;
 };
 

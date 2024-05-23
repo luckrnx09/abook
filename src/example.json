@@ -1,98 +1,54 @@
 {
-    "id": "js-beginner-book",
-    "title": "JavaScript 入门书",
-    "language": "zh-CN",
-    "author": "John Doe",
-    "summary": "这是一本 JavaScript 入门书",
-    "prompt": "使用文言文书写",
-    "chapters": [
-      {
-        "id": "chapter-1",
-        "title": "Introduction to JavaScript",
-        "articles": [
-          {
-            "id": "article-1",
-            "title": "Getting Started with JavaScript",
-            "slug": "getting-started",
-            "sections": [
-              {
-                "id": "section-1",
-                "title": "What is JavaScript?",
-                "prompt": "Write a brief description of JavaScript.",
-                "content": ""
-              },
-              {
-                "id": "section-2",
-                "title": "Setting Up the Development Environment",
-                "prompt": "Provide instructions on setting up the development environment for JavaScript.",
-                "content": ""
-              }
-            ]
-          },
-          {
-            "id": "article-2",
-            "title": "Variables and Data Types",
-            "slug": "variables-and-data-types",
-            "sections": [
-              {
-                "id": "section-3",
-                "title": "Declaring Variables",
-                "prompt": "Explain how to declare variables in JavaScript.",
-                "content": ""
-              },
-              {
-                "id": "section-4",
-                "title": "Primitive Data Types",
-                "prompt": "Discuss the primitive data types in JavaScript.",
-                "content": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "chapter-1",
-        "title": "Introduction to JavaScript",
-        "articles": [
-          {
-            "id": "article-1",
-            "title": "Getting Started with JavaScript",
-            "slug": "getting-started",
-            "sections": [
-              {
-                "id": "section-1",
-                "title": "What is JavaScript?",
-                "prompt": "Write a brief description of JavaScript.",
-                "content": ""
-              },
-              {
-                "id": "section-2",
-                "title": "Setting Up the Development Environment",
-                "prompt": "Provide instructions on setting up the development environment for JavaScript.",
-                "content": ""
-              }
-            ]
-          },
-          {
-            "id": "article-2",
-            "title": "Variables and Data Types",
-            "slug": "variables-and-data-types",
-            "sections": [
-              {
-                "id": "section-3",
-                "title": "Declaring Variables",
-                "prompt": "Explain how to declare variables in JavaScript.",
-                "content": ""
-              },
-              {
-                "id": "section-4",
-                "title": "Primitive Data Types",
-                "prompt": "Discuss the primitive data types in JavaScript.",
-                "content": ""
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "id": "js-beginner-book",
+  "title": "JavaScript 极速入门",
+  "language": "zh-CN",
+  "author": "鲁迅",
+  "summary": "这是一本 JavaScript 入门书，帮助新手快速掌握 JavaScript 编程语言",
+  "prompt": "使用鲁迅的风格书写",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "title": "JavaScript 引论",
+      "articles": [
+        {
+          "id": "article-1",
+          "title": "JavaScript 入门",
+          "slug": "getting-started",
+          "sections": [
+            {
+              "id": "section-1",
+              "title": "何为 JavaScript？",
+              "prompt": "简述 JavaScript。",
+              "content": ""
+            },
+            {
+              "id": "section-2",
+              "title": "配置开发环境",
+              "prompt": "提供配置 JavaScript 开发环境的指南。",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "id": "article-2",
+          "title": "变量与数据类型",
+          "slug": "variables-and-data-types",
+          "sections": [
+            {
+              "id": "section-3",
+              "title": "声明变量",
+              "prompt": "解释如何在 JavaScript 中声明变量以及注意事项。",
+              "content": ""
+            },
+            {
+              "id": "section-4",
+              "title": "原始数据类型",
+              "prompt": "讨论 JavaScript 中的原始数据类型。",
+              "content": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
