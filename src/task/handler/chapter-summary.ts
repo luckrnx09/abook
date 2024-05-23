@@ -3,7 +3,7 @@ import {BaseHandler} from './base';
 
 class GenerateChapterSummaryTaskHandler extends BaseHandler<GenerateChapterSummaryTask> {
   async exec(): Promise<string> {
-    return 'generated chapter summary!';
+    return 'N/A';
   }
 }
 export {GenerateChapterSummaryTaskHandler};

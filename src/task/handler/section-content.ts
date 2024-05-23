@@ -43,6 +43,8 @@ class GenerateSectionContentTaskHandler extends BaseHandler<GenerateSectionConte
           this.task.section.title
         }
 
+      You should write directly without any headings. Ensure your writing is focused, detailed, and descriptive, avoiding vague notions. Don't think about writing length limitations, prioritize clarity to engage a diverse audience, showcasing your exceptional writing ability.
+
       Based on the information above, please strictly follow the requirements below to complete the writing of Section ${
         this.task.section.number
       }.
