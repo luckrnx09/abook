@@ -23,7 +23,7 @@ const executeTask = async (
   try {
     const content =
       await // @ts-expect-error: the handler is an implement child class
-      (new Handler(task, prompt) as BaseHandler<Task>).exec();
+      (new Handler(task, prompt, book.language) as BaseHandler<Task>).exec();
     if (content === '') {
       throw new Error(`Content respond from ${task.type} handler was empty`);
     }

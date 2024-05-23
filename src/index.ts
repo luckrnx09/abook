@@ -10,6 +10,6 @@ const metaFile = process.cwd() + '/src/example.json';
 (async () => {
   const book = await prepareBook(metaFile);
   await start(book);
-  const md = toMarkdown(book);
-  logger.info(md);
+  // const md = toMarkdown(book);
+  // logger.info(md);
 })();
