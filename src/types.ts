@@ -36,10 +36,12 @@ const BookSchema = z.object({
 interface GenerateSectionContentTask {
   type: 'section-content';
   summaries: {
-    chapters: string[];
-    previousSectionsOfCurrentArticle: string[];
+    chapters: {number: number; summary: string}[];
+    previousSectionsOfCurrentArticle: {number: number; summary: string}[];
   };
-  section: Omit<z.infer<typeof SectionSchema>, 'content'>;
+  article: {number: number; title: string};
+  chapter: {number: number; title: string};
+  section: {number: number} & Omit<z.infer<typeof SectionSchema>, 'content'>;
   path: string;
 }
 
@@ -86,6 +88,10 @@ export {
   ChapterSchema,
   ArticleSchema,
   SectionSchema,
+  GenerateChapterSummaryTask,
+  GenerateArticleSummaryTask,
+  GenerateSectionSummaryTask,
+  GenerateSectionContentTask,
   Task,
   TaskResult,
 };

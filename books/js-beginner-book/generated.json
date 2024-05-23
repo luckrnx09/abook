@@ -1,7 +1,7 @@
 {
   "id": "js-beginner-book",
   "title": "JavaScript 入门书",
-  "language": "JavaScript",
+  "language": "zh-CN",
   "author": "John Doe",
   "summary": "这是一本 JavaScript 入门书",
   "prompt": "使用文言文书写",
@@ -19,18 +19,15 @@
               "id": "section-1",
               "title": "What is JavaScript?",
               "prompt": "Write a brief description of JavaScript.",
-              "content": "hello",
-              "summary": "hello"
+              "content": ""
             },
             {
               "id": "section-2",
               "title": "Setting Up the Development Environment",
               "prompt": "Provide instructions on setting up the development environment for JavaScript.",
-              "content": "hello",
-              "summary": "hello"
+              "content": ""
             }
-          ],
-          "summary": "hello"
+          ]
         },
         {
           "id": "article-2",
@@ -41,21 +38,17 @@
               "id": "section-3",
               "title": "Declaring Variables",
               "prompt": "Explain how to declare variables in JavaScript.",
-              "content": "hello",
-              "summary": "hello"
+              "content": ""
             },
             {
               "id": "section-4",
               "title": "Primitive Data Types",
               "prompt": "Discuss the primitive data types in JavaScript.",
-              "content": "hello",
-              "summary": "hello"
+              "content": ""
             }
-          ],
-          "summary": "hello"
+          ]
         }
-      ],
-      "summary": "hello"
+      ]
     },
     {
       "id": "chapter-1",
@@ -70,18 +63,15 @@
               "id": "section-1",
               "title": "What is JavaScript?",
               "prompt": "Write a brief description of JavaScript.",
-              "content": "hello",
-              "summary": "hello"
+              "content": ""
             },
             {
               "id": "section-2",
               "title": "Setting Up the Development Environment",
               "prompt": "Provide instructions on setting up the development environment for JavaScript.",
-              "content": "hello",
-              "summary": "hello"
+              "content": ""
             }
-          ],
-          "summary": "hello"
+          ]
         },
         {
           "id": "article-2",
@@ -92,21 +82,17 @@
               "id": "section-3",
               "title": "Declaring Variables",
               "prompt": "Explain how to declare variables in JavaScript.",
-              "content": "hello",
-              "summary": "hello"
+              "content": ""
             },
             {
               "id": "section-4",
               "title": "Primitive Data Types",
               "prompt": "Discuss the primitive data types in JavaScript.",
-              "content": "hello",
-              "summary": "hello"
+              "content": ""
             }
-          ],
-          "summary": "hello"
+          ]
         }
-      ],
-      "summary": "hello"
+      ]
     }
   ]
 }

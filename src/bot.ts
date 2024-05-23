@@ -1,8 +1,7 @@
 import {z} from 'zod';
 import {BookSchema} from './types';
 import {logger} from './logger';
-import {Task} from './types';
-import {executeTask} from './task';
+import {executeTask} from './task/exec';
 import {findNextTask} from './task/find';
 import * as jsonpatch from 'fast-json-patch';
 import {persistBook} from './bridge';
@@ -19,7 +18,7 @@ const start = async (book: z.infer<typeof BookSchema>) => {
     if (task === null) {
       break;
     }
-    const {error, content} = await executeTask(task);
+    const {error, content} = await executeTask(book, task);
     if (error) {
       logger.error(
         new Error(`❌ An error occurred while executing the task: ${error}`)
@@ -34,7 +33,7 @@ const start = async (book: z.infer<typeof BookSchema>) => {
         value: content,
       },
     ]).newDocument;
-    await persistBook(newBook);
+    // await persistBook(newBook);
     logger.info(
       `✅ Task [${task.type} for ${task.path}] executed successfully`
     );

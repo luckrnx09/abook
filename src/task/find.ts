@@ -1,5 +1,6 @@
-import {z} from 'zod';
+import {number, z} from 'zod';
 import {BookSchema, Task} from '../types';
+import {title} from 'process';
 
 const hasValue = (str: string | undefined) => {
   return typeof str === 'string' && str.trim().length > 0;
@@ -32,12 +33,29 @@ const findNextTask = (book: z.infer<typeof BookSchema>): Task | null => {
             summaries: {
               chapters: book.chapters
                 .filter((_, i) => i < chapterIndex)
-                .map(c => c.summary as string),
+                .map((c, i) => ({
+                  number: i + 1,
+                  summary: c.summary as string,
+                })),
               previousSectionsOfCurrentArticle: article.sections
                 .filter((_, i) => i < sectionIndex)
-                .map(s => s.summary as string),
+                .map((s, i) => ({
+                  number: i + 1,
+                  summary: s.summary as string,
+                })),
             },
-            section,
+            article: {
+              number: articleIndex + 1,
+              title: article.title,
+            },
+            chapter: {
+              number: chapterIndex + 1,
+              title: chapter.title,
+            },
+            section: {
+              number: sectionIndex + 1,
+              ...section,
+            },
             path: `/chapters/${chapterIndex}/articles/${articleIndex}/sections/${sectionIndex}/content`,
           };
         }
