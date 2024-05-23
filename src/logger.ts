@@ -1,5 +1,7 @@
-const info = (message: string) => console.log(message);
-const error = (error: Error) => console.error(error);
+const info = (message: string) =>
+  console.log(`[${new Date().toLocaleString()}] ${message}`);
+const error = (error: Error) =>
+  console.error(`[${new Date().toLocaleString()}] ${error}`);
 
 export const logger = {
   info,

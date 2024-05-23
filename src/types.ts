@@ -33,4 +33,59 @@ const BookSchema = z.object({
   chapters: z.array(ChapterSchema),
 });
 
-export {BookSchema, ChapterSchema, ArticleSchema, SectionSchema};
+interface GenerateSectionContentTask {
+  type: 'section-content';
+  summaries: {
+    chapters: string[];
+    previousSectionsOfCurrentArticle: string[];
+  };
+  section: Omit<z.infer<typeof SectionSchema>, 'content'>;
+  path: string;
+}
+
+interface GenerateSectionSummaryTask {
+  type: 'section-summary';
+  content: string;
+  path: string;
+}
+
+interface GenerateArticleSummaryTask {
+  type: 'article-summary';
+  summaries: {
+    sections: string[];
+  };
+  path: string;
+}
+
+interface GenerateChapterSummaryTask {
+  type: 'chapter-summary';
+  summaries: {
+    articles: string[];
+  };
+  path: string;
+}
+
+type Task =
+  | GenerateSectionContentTask
+  | GenerateSectionSummaryTask
+  | GenerateArticleSummaryTask
+  | GenerateChapterSummaryTask;
+
+interface SuccessTaskResult {
+  error: null;
+  content: string;
+}
+interface FailTaskResult {
+  error: string;
+  content: null;
+}
+type TaskResult = SuccessTaskResult | FailTaskResult;
+
+export {
+  BookSchema,
+  ChapterSchema,
+  ArticleSchema,
+  SectionSchema,
+  Task,
+  TaskResult,
+};

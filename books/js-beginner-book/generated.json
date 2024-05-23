@@ -19,18 +19,18 @@
               "id": "section-1",
               "title": "What is JavaScript?",
               "prompt": "Write a brief description of JavaScript.",
-              "content": "section-1-content",
-              "summary": "section-1-summary"
+              "content": "hello",
+              "summary": "hello"
             },
             {
               "id": "section-2",
               "title": "Setting Up the Development Environment",
               "prompt": "Provide instructions on setting up the development environment for JavaScript.",
-              "content": "section-2-content",
-              "summary": "aaa"
+              "content": "hello",
+              "summary": "hello"
             }
           ],
-          "summary": "article-1-summary"
+          "summary": "hello"
         },
         {
           "id": "article-2",
@@ -41,21 +41,21 @@
               "id": "section-3",
               "title": "Declaring Variables",
               "prompt": "Explain how to declare variables in JavaScript.",
-              "content": "asdas",
-              "summary": "asda"
+              "content": "hello",
+              "summary": "hello"
             },
             {
               "id": "section-4",
               "title": "Primitive Data Types",
               "prompt": "Discuss the primitive data types in JavaScript.",
-              "content": "asdas",
-              "summary": "asda"
+              "content": "hello",
+              "summary": "hello"
             }
           ],
-          "summary": "asdasdsa"
+          "summary": "hello"
         }
       ],
-      "summary": "chapter-1-summary"
+      "summary": "hello"
     },
     {
       "id": "chapter-1",
@@ -70,16 +70,18 @@
               "id": "section-1",
               "title": "What is JavaScript?",
               "prompt": "Write a brief description of JavaScript.",
-              "content": "asdsa",
-              "summary": "summary-1"
+              "content": "hello",
+              "summary": "hello"
             },
             {
               "id": "section-2",
               "title": "Setting Up the Development Environment",
               "prompt": "Provide instructions on setting up the development environment for JavaScript.",
-              "content": ""
+              "content": "hello",
+              "summary": "hello"
             }
-          ]
+          ],
+          "summary": "hello"
         },
         {
           "id": "article-2",
@@ -90,17 +92,21 @@
               "id": "section-3",
               "title": "Declaring Variables",
               "prompt": "Explain how to declare variables in JavaScript.",
-              "content": ""
+              "content": "hello",
+              "summary": "hello"
             },
             {
               "id": "section-4",
               "title": "Primitive Data Types",
               "prompt": "Discuss the primitive data types in JavaScript.",
-              "content": ""
+              "content": "hello",
+              "summary": "hello"
             }
-          ]
+          ],
+          "summary": "hello"
         }
-      ]
+      ],
+      "summary": "hello"
     }
   ]
 }
