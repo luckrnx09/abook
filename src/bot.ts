@@ -33,7 +33,7 @@ const start = async (book: z.infer<typeof BookSchema>) => {
         value: content,
       },
     ]).newDocument;
-    // await persistBook(newBook);
+    await persistBook(newBook);
     logger.info(
       `✅ Task [${task.type} for ${task.path}] executed successfully`
     );

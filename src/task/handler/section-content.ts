@@ -1,3 +1,5 @@
+import {openAIModel} from '../../llm/openai';
+import {MarkdownParser} from '../../llm/parser';
 import {GenerateSectionContentTask} from '../../types';
 import {BaseHandler} from './base';
 
@@ -21,7 +23,7 @@ class GenerateSectionContentTaskHandler extends BaseHandler<GenerateSectionConte
       .map(s => `\t  - Section ${s.number}: ${s.summary}`)
       .join('\n')}`
         : '';
-    const promptTemplate = ChatPromptTemplate.fromMessages([
+    const prompt = ChatPromptTemplate.fromMessages([
       ['system', this.rigid],
       [
         'user',
@@ -40,7 +42,7 @@ class GenerateSectionContentTaskHandler extends BaseHandler<GenerateSectionConte
         - The title for the section you need to write is: ${
           this.task.section.title
         }
-        
+
       Based on the information above, please strictly follow the requirements below to complete the writing of Section ${
         this.task.section.number
       }.
@@ -48,9 +50,8 @@ class GenerateSectionContentTaskHandler extends BaseHandler<GenerateSectionConte
       `,
       ],
     ]);
-    const prompt = await promptTemplate.invoke({});
-    console.log(prompt.messages[1].content);
-    return 'generated section content!';
+    const chain = prompt.pipe(openAIModel).pipe(new MarkdownParser());
+    return await chain.invoke({});
   }
 }
 export {GenerateSectionContentTaskHandler};
