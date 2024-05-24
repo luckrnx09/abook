@@ -1,10 +1,10 @@
 import {ChatPromptTemplate} from '@langchain/core/prompts';
 import {GenerateSectionSummaryTask} from '../../types';
 import {BaseHandler} from './base';
-import {model} from '../../llm/model';
-import {markdownParser} from '../../llm/parser';
+import {model} from '../../chain/model';
+import {markdownParser} from '../../chain/parser';
 import {SystemMessage, HumanMessage} from '@langchain/core/messages';
-import {summarizer} from './role/summarizer';
+import {summarizer} from '../prompt/summarizer';
 
 class GenerateSectionSummaryTaskHandler extends BaseHandler<GenerateSectionSummaryTask> {
   async exec(): Promise<string> {

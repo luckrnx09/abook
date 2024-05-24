@@ -1,11 +1,11 @@
 import {HumanMessage, SystemMessage} from '@langchain/core/messages';
-import {model} from '../../llm/model';
-import {markdownParser} from '../../llm/parser';
+import {model} from '../../chain/model';
+import {markdownParser} from '../../chain/parser';
 import {GenerateSectionContentTask} from '../../types';
 import {BaseHandler} from './base';
 
 import {ChatPromptTemplate} from '@langchain/core/prompts';
-import {writer} from './role/writer';
+import {writer} from '../prompt/writer';
 
 class GenerateSectionContentTaskHandler extends BaseHandler<GenerateSectionContentTask> {
   async exec(): Promise<string> {
