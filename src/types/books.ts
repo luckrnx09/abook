@@ -4,7 +4,7 @@ const SectionSchema = z.object({
   id: z.string(),
   title: z.string(),
   /**
-   * @ai-look-here
+   * @ai-looks-here
    * Guidance to AIGC on how to generate section content.
    * e.g.: Specifically describe
    * - What key points need to be included in the section
@@ -26,6 +26,10 @@ const ArticleSchema = z.object({
   id: z.string(),
   title: z.string(),
   slug: z.string(),
+  /**
+   * @ai-looks-here
+   * An article should include 4-8 sections
+   */
   sections: z.array(SectionSchema),
   /**
    * @ai-ignore
@@ -50,7 +54,7 @@ const BookSchema = z.object({
   author: z.string(),
   summary: z.string(),
   /**
-   * @ai-look-here
+   * @ai-looks-here
    * Guidance for the AIGC on the uniform norms to be followed in the preparation of each text of this book.
    * e.g.: Specifically describe
    * - Creative writing by imitating the writing techniques of whoever
