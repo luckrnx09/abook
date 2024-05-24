@@ -1,8 +1,8 @@
 import {ChatPromptTemplate} from '@langchain/core/prompts';
 import {GenerateSectionSummaryTask} from '../../types';
 import {BaseHandler} from './base';
-import {openAIModel} from '../../llm/openai';
-import {MarkdownParser} from '../../llm/parser';
+import {model} from '../../llm/model';
+import {markdownParser} from '../../llm/parser';
 
 class GenerateSectionSummaryTaskHandler extends BaseHandler<GenerateSectionSummaryTask> {
   async exec(): Promise<string> {
@@ -20,7 +20,7 @@ class GenerateSectionSummaryTaskHandler extends BaseHandler<GenerateSectionSumma
           .trim()}\n`,
       ],
     ]);
-    const chain = prompt.pipe(openAIModel).pipe(new MarkdownParser());
+    const chain = prompt.pipe(model).pipe(markdownParser);
     return await chain.invoke({});
   }
 }

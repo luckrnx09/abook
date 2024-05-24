@@ -23,8 +23,9 @@ class MarkdownParser extends BaseOutputParser<string> {
   }
 
   getFormatInstructions(): string {
-    return ''; // Not working well in GPT 3.5
+    return ''; // Keep it empty and move the instruction to the end of the system prompt because it's not working well in GPT 3.5
   }
 }
 
-export {MarkdownParser};
+const markdownParser = new MarkdownParser();
+export {markdownParser};

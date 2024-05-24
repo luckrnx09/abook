@@ -20,8 +20,8 @@ const getBookRigidPrompt = (
     Requirements: ${book.prompt ?? 'N/A'}
   
   ## Constraints:
-  - Focus only on the given book information and user requirements in your writing.
-  - Stick to the language of the book for responses. If the language is not specified, use the english as default.
+  - Stick to focus only on the given book information and user requirements in your writing.
+  - Stick to the ${book.language} for responses.
   - Stick to output a markdown format and go in the <RESPONSE>real markdown content here</RESPONSE> tag. Do not return anything else.
   `;
 };

@@ -7,7 +7,7 @@
     "example": "example"
   },
   "scripts": {
-    "dev": "npx nodemon --ignore books/ ./src/index.ts",
+    "dev": "dotenv -o -- npx nodemon --watch src src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
     "clean": "gts clean",
@@ -28,7 +28,7 @@
   "dependencies": {
     "@langchain/core": "^0.2.0",
     "@langchain/openai": "^0.0.33",
-    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
     "fast-json-patch": "^3.1.1",
     "langchain": "^0.2.0",
     "nodemon": "^3.1.0",
