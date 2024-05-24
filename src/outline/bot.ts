@@ -12,7 +12,7 @@ const start = async (idea: z.infer<typeof IdeaSchema>) => {
   const prompt = new ChatPromptTemplate({
     inputVariables: [],
     promptMessages: [
-      new SystemMessage(outlineMaster(schema)),
+      new SystemMessage(outlineMaster(schema, idea.language)),
       new HumanMessage(
         `\nHere's the information about the book:\n\`\`\`json\n${JSON.stringify(
           idea,
