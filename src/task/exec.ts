@@ -5,7 +5,6 @@ import {BaseHandler} from './handler/base';
 import {GenerateChapterSummaryTaskHandler} from './handler/chapter-summary';
 import {GenerateSectionContentTaskHandler} from './handler/section-content';
 import {GenerateSectionSummaryTaskHandler} from './handler/section-summary';
-import {getBookRigidPrompt} from './rigid';
 
 const handlerConstructors: Record<Task['type'], typeof BaseHandler<Task>> = {
   'section-content': GenerateSectionContentTaskHandler,
@@ -19,11 +18,10 @@ const executeTask = async (
   task: Task
 ): Promise<TaskResult> => {
   const Handler = handlerConstructors[task.type];
-  const prompt = getBookRigidPrompt(book);
   try {
     const content =
       await // @ts-expect-error: the handler is an implement child class
-      (new Handler(task, prompt, book.language) as BaseHandler<Task>).exec();
+      (new Handler(book, task) as BaseHandler<Task>).exec();
     if (content === '') {
       throw new Error(`Content respond from ${task.type} handler was empty`);
     }

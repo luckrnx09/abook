@@ -63,7 +63,10 @@ const findNextTask = (book: z.infer<typeof BookSchema>): Task | null => {
         return {
           type: 'article-summary',
           summaries: {
-            sections: article.sections.map(s => s.summary as string),
+            sections: article.sections.map((s, i) => ({
+              number: i + 1,
+              summary: s.summary as string,
+            })),
           },
           path: `/chapters/${chapterIndex}/articles/${articleIndex}/summary`,
         };
@@ -73,7 +76,10 @@ const findNextTask = (book: z.infer<typeof BookSchema>): Task | null => {
       return {
         type: 'chapter-summary',
         summaries: {
-          articles: chapter.articles.map(a => a.summary as string),
+          articles: chapter.articles.map((a, i) => ({
+            number: i + 1,
+            summary: a.summary as string,
+          })),
         },
         path: `/chapters/${chapterIndex}/summary`,
       };

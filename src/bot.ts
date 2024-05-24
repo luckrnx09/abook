@@ -21,7 +21,9 @@ const start = async (book: z.infer<typeof BookSchema>) => {
     const {error, content} = await executeTask(book, task);
     if (error) {
       logger.error(
-        new Error(`❌ An error occurred while executing the task: ${error}`)
+        new Error(
+          `❌ An error occurred while executing the ${task.type} task: ${error}`
+        )
       );
       await sleep(10000);
       continue;

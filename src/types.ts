@@ -54,7 +54,7 @@ interface GenerateSectionSummaryTask {
 interface GenerateArticleSummaryTask {
   type: 'article-summary';
   summaries: {
-    sections: string[];
+    sections: {number: number; summary: string}[];
   };
   path: string;
 }
@@ -62,7 +62,7 @@ interface GenerateArticleSummaryTask {
 interface GenerateChapterSummaryTask {
   type: 'chapter-summary';
   summaries: {
-    articles: string[];
+    articles: {number: number; summary: string}[];
   };
   path: string;
 }

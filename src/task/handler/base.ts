@@ -1,14 +1,13 @@
-import {Task} from '../../types';
+import {z} from 'zod';
+import {BookSchema, Task} from '../../types';
 
 abstract class BaseHandler<T extends Task> {
   constructor(
-    protected task: T,
-    protected rigid: string,
-    protected language: string
+    protected book: Omit<z.infer<typeof BookSchema>, 'chapters'>,
+    protected task: T
   ) {
+    this.book = book;
     this.task = task;
-    this.rigid = rigid;
-    this.language = language;
   }
 
   abstract exec(): Promise<string>;
