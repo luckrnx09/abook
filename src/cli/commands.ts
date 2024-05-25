@@ -1,15 +1,16 @@
-import {Argument, Command} from 'commander';
+import {Argument, Command, Option} from 'commander';
 import {confirm, input, select} from '@inquirer/prompts';
-import {IdeaSchema} from '../types';
+import {BookSchema, IdeaSchema} from '../types';
 import * as fs from 'fs/promises';
 import {existsSync, stat} from 'fs';
-import {IDEA_OUTPUT_DIR} from '../constants';
+import {BOOK_OUTPUT_DIR, IDEA_OUTPUT_DIR} from '../constants';
 import * as path from 'path';
 import {Table} from 'console-table-printer';
 import {readJSON} from '../util/read-json';
 import {z} from 'zod';
 import * as ideaBot from '../bot/idea/bot';
 import * as generationBot from '../bot/generation/bot';
+import * as markdownBot from '../bot/publication/markdown/bot';
 import {pkg} from '../pkg';
 import {logger} from '../util/logger';
 const FILE_EXTENSION = '.idea';
@@ -240,11 +241,43 @@ const generateBookCommand = new Command('run')
     await generationBot.start(ideaData.outline);
   });
 
+const publishCommand = new Command('publish')
+  .addArgument(new Argument('idea'))
+  .description('convert book content to markdown')
+  .action(async (idea: string) => {
+    await ensureDirCreated();
+    const ideaData = await getIdea(idea);
+    if (ideaData === null) {
+      logger.error(new Error('❌ Idea not exists'));
+      return;
+    }
+    if (!ideaData.outline) {
+      logger.error(
+        new Error(
+          '❌ There is no outline generated for this idea, run `${pkg.name} outline ${idea}` to generate the outline'
+        )
+      );
+      return;
+    }
+
+    const bookId = ideaData.outline.id;
+    if (!existsSync(path.resolve(BOOK_OUTPUT_DIR, bookId, 'generated.json'))) {
+      logger.error(
+        new Error(
+          `❌ Book not generated, please run \`${pkg.name} run ${idea}\` first`
+        )
+      );
+      return;
+    }
+    markdownBot.start(BookSchema.parse(ideaData.outline));
+  });
+
 const commands: Command[] = [
   createIdeaCommand,
   removeIdeaCommand,
   listIdeaCommand,
   generateOutlineCommand,
   generateBookCommand,
+  publishCommand,
 ];
 export {commands};
