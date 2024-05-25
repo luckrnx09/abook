@@ -13,6 +13,7 @@ import * as generationBot from '../bot/generation/bot';
 import * as markdownBot from '../bot/publication/markdown/bot';
 import {pkg} from '../pkg';
 import {logger} from '../util/logger';
+import {prepareBook} from '../bot/generation/bridge';
 const FILE_EXTENSION = '.idea';
 
 const ensureDirCreated = async () => {
@@ -269,7 +270,8 @@ const publishCommand = new Command('publish')
       );
       return;
     }
-    markdownBot.start(BookSchema.parse(ideaData.outline));
+    const book = await prepareBook(BookSchema.parse(ideaData.outline));
+    markdownBot.start(book);
   });
 
 const commands: Command[] = [
