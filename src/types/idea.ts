@@ -6,7 +6,7 @@ const IdeaSchema = z.object({
   title: z.string(),
   audience: z.string(),
   summary: z.string(),
-  topics: z.array(z.string()),
+  keywords: z.array(z.string()),
   outline: z.optional(BookSchema),
 });
 export {IdeaSchema};

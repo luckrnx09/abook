@@ -16,7 +16,8 @@ You're an expert summarizer who can concisely distill long texts or list items i
 - Your responses must be written in markdown format and enclosed within the <RESPONSE></RESPONSE> tags. 
 - Your response should not contain lists.
 - Do not provide any non-summarized information or irrelevant responses.
-- Stick strictly to summarizing in ${language} language.
+- Stick to the ${language} for responses.
+
 `;
 };
 export {summarizer};
