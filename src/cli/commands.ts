@@ -50,7 +50,7 @@ const getIdea = async (idea: string) => {
 };
 
 const createIdeaCommand = new Command('new')
-  .description('Create an idea')
+  .description('create an idea')
   .action(async () => {
     await ensureDirCreated();
     let name = await input({
@@ -160,7 +160,7 @@ const createIdeaCommand = new Command('new')
 
 const removeIdeaCommand = new Command('rm')
   .addArgument(new Argument('idea'))
-  .description('Remove an idea')
+  .description('remove an idea')
   .action(async (idea: string) => {
     await ensureDirCreated();
     const ideas = await getIdeaList();
@@ -172,7 +172,7 @@ const removeIdeaCommand = new Command('rm')
   });
 
 const listIdeaCommand = new Command('ls')
-  .description('List all the ideas')
+  .description('list all the ideas')
   .action(async () => {
     await ensureDirCreated();
     const ideas = await getIdeaList();
@@ -195,7 +195,7 @@ const listIdeaCommand = new Command('ls')
 
 const generateOutlineCommand = new Command('outline')
   .addArgument(new Argument('idea'))
-  .description('Generate outline from an idea')
+  .description('generate outline from an idea')
   .action(async (idea: string) => {
     await ensureDirCreated();
     const ideaData = await getIdea(idea);
@@ -220,7 +220,7 @@ const generateOutlineCommand = new Command('outline')
 
 const generateBookCommand = new Command('run')
   .addArgument(new Argument('idea'))
-  .description('Generate book content from an idea with outline')
+  .description('generate book content from an idea with outline')
   .action(async (idea: string) => {
     await ensureDirCreated();
     const ideaData = await getIdea(idea);

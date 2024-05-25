@@ -7,7 +7,7 @@ const {name, description, version} = pkg;
 program
   .name(name)
   .description(
-    `An AI powered tool for generating any books from scratch\nData Stored in: \n${IDEA_OUTPUT_DIR}`
+    `An AI powered command-line tool for generating any books from scratch\nData Stored in: \n${IDEA_OUTPUT_DIR}`
   )
   .version(version);
 

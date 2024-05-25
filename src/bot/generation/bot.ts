@@ -1,6 +1,6 @@
 import {z} from 'zod';
 import {BookSchema} from '../../types';
-import {logger} from '../../logger';
+import {logger} from '../../util/logger';
 import {executeTask} from './task/exec';
 import {findNextTask} from './task/find';
 import * as jsonpatch from 'fast-json-patch';

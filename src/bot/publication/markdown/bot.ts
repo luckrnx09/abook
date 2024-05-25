@@ -4,7 +4,7 @@ import { BookSchema } from '../../../types';
 import { markdown } from './markdown';
 import * path from 'path';
 import { BOOK_OUTPUT_DIR } from '../../../constants';
-import { logger } from '../../../logger';
+import { logger } from '../../../util/logger';
 
 const start = async (book: z.infer<typeof BookSchema>) => { 
     const content = markdown(book);

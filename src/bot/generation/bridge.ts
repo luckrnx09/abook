@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises';
 import {existsSync} from 'fs';
 import {BookSchema} from '../../types';
-import {logger} from '../../logger';
+import {logger} from '../../util/logger';
 import * as path from 'path';
 import {BOOK_OUTPUT_DIR} from '../../constants';
 import {z} from 'zod';
