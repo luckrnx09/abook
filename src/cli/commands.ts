@@ -11,6 +11,7 @@ import {z} from 'zod';
 import * as ideaBot from '../bot/idea/bot';
 import * as generationBot from '../bot/generation/bot';
 import {pkg} from '../pkg';
+import {logger} from '../util/logger';
 const FILE_EXTENSION = '.idea';
 
 const ensureDirCreated = async () => {
@@ -65,7 +66,7 @@ const createIdeaCommand = new Command('new')
     name = name.replace(/\s+/g, '-');
     const ideas = await getIdeaList();
     if (ideas.some(i => i.name === name)) {
-      console.error(new Error('❌ The idea already exists.'));
+      logger.error(new Error('❌ The idea already exists.'));
       return;
     }
     let language = await select({
@@ -155,7 +156,7 @@ const createIdeaCommand = new Command('new')
       JSON.stringify(idea, null, 2),
       {encoding: 'utf-8'}
     );
-    console.info('✨ Idea created successfully');
+    logger.info('🎉 Idea created successfully');
   });
 
 const removeIdeaCommand = new Command('rm')
@@ -167,7 +168,7 @@ const removeIdeaCommand = new Command('rm')
     if (ideas.some(i => i.name === idea)) {
       await fs.rm(path.resolve(IDEA_OUTPUT_DIR, `${idea}${FILE_EXTENSION}`));
     } else {
-      console.error(new Error(`❌ Idea ${idea} not exists.`));
+      logger.error(new Error(`❌ Idea ${idea} not exists.`));
     }
   });
 
@@ -200,11 +201,11 @@ const generateOutlineCommand = new Command('outline')
     await ensureDirCreated();
     const ideaData = await getIdea(idea);
     if (ideaData === null) {
-      console.error(new Error('❌ Idea not exists'));
+      logger.error(new Error('❌ Idea not exists'));
       return;
     }
     if (ideaData.outline) {
-      console.error(new Error('❌ Outline has been generated'));
+      logger.error(new Error('❌ Outline has been generated'));
       return;
     }
     ideaData.outline = await ideaBot.start(ideaData);
@@ -212,8 +213,8 @@ const generateOutlineCommand = new Command('outline')
     await fs.writeFile(fileName, JSON.stringify(ideaData, null, 2), {
       encoding: 'utf-8',
     });
-    console.info('✨ Outline generate successfully');
-    console.info(
+    logger.info('🎉 Outline generate successfully');
+    logger.info(
       `Open ${fileName} for secondary adjustment then run \`${pkg.name} run ${idea}\` to generate the book content`
     );
   });
@@ -225,11 +226,11 @@ const generateBookCommand = new Command('run')
     await ensureDirCreated();
     const ideaData = await getIdea(idea);
     if (ideaData === null) {
-      console.error(new Error('❌ Idea not exists'));
+      logger.error(new Error('❌ Idea not exists'));
       return;
     }
     if (!ideaData.outline) {
-      console.error(
+      logger.error(
         new Error(
           '❌ There is no outline generated for this idea, run `${pkg.name} outline ${idea}` to generate the outline'
         )

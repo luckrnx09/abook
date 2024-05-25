@@ -25,11 +25,11 @@ const SectionSchema = z.object({
 const ArticleSchema = z.object({
   id: z.string(),
   title: z.string(),
-  slug: z.string(),
   /**
-   * @ai-looks-here
-   * An article should include 4-8 sections
+   * #ai-looks-here
+   * Always use English expressions to generate slug to better support SEO
    */
+  slug: z.string(),
   sections: z.array(SectionSchema),
   /**
    * @ai-ignore

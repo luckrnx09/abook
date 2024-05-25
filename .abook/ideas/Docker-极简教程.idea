@@ -1,0 +1,360 @@
+{
+  "language": "zh-CN",
+  "title": "Docker-极简教程",
+  "audience": "开发人员",
+  "summary": "本书介绍 Docker 的基本概念、使用方法和最佳实践，适合初学者和有一定经验的用户。本书案例丰富，使用了大量热门开源项目进行讲解，由浅入深展示了前端开发人员如何使用 docker 提升工作效率。",
+  "topics": [
+    "Docker 安装和配置",
+    "容器的创建与管理",
+    "网络和存储管理",
+    "容器编排和集群管理",
+    "Docker 与持续集成/持续部署",
+    "镜像的构建与管理",
+    "Dockerfile 详解"
+  ],
+  "outline": {
+    "id": "docker-jianjianjiaocheng",
+    "title": "Docker-极简教程",
+    "language": "zh-CN",
+    "author": "",
+    "summary": "本书介绍 Docker 的基本概念、使用方法和最佳实践，适合初学者和有一定经验的用户。本书案例丰富，使用了大量热门开源项目进行讲解，由浅入深展示了前端开发人员如何使用 docker 提升工作效率。",
+    "chapters": [
+      {
+        "id": "chapter-1",
+        "title": "Docker 安装和配置",
+        "articles": [
+          {
+            "id": "article-1-1",
+            "title": "Docker 简介",
+            "slug": "docker-jianjie",
+            "sections": [
+              {
+                "id": "section-1-1-1",
+                "title": "Docker 的起源",
+                "prompt": "描述 Docker 的起源和发展历程，介绍 Docker 的基本概念和优势。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-1-1-2",
+                "title": "Docker 安装步骤",
+                "prompt": "详细介绍 Docker 的安装步骤，包括在不同操作系统上的安装方法。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "id": "article-1-2",
+            "title": "Docker 配置",
+            "slug": "docker-peizhi",
+            "sections": [
+              {
+                "id": "section-1-2-1",
+                "title": "Docker 配置文件",
+                "prompt": "介绍 Docker 的配置文件内容和常见配置项，帮助读者正确配置 Docker 环境。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-1-2-2",
+                "title": "网络配置",
+                "prompt": "讲解 Docker 的网络配置，包括网络模式、端口映射等内容。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chapter-2",
+        "title": "容器的创建与管理",
+        "articles": [
+          {
+            "id": "article-2-1",
+            "title": "容器基础操作",
+            "slug": "rongqi-jichu",
+            "sections": [
+              {
+                "id": "section-2-1-1",
+                "title": "容器创建",
+                "prompt": "介绍如何创建 Docker 容器，包括使用镜像、指定容器名称等操作。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-2-1-2",
+                "title": "容器管理",
+                "prompt": "讲解容器的启动、停止、删除等管理操作，帮助读者熟练掌握容器操作。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "id": "article-2-2",
+            "title": "容器数据管理",
+            "slug": "rongqi-shuju",
+            "sections": [
+              {
+                "id": "section-2-2-1",
+                "title": "数据卷",
+                "prompt": "详细介绍 Docker 数据卷的概念和用法，帮助读者管理容器中的数据。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-2-2-2",
+                "title": "数据备份与恢复",
+                "prompt": "讲解如何备份和恢复 Docker 容器中的数据，保障数据安全。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chapter-3",
+        "title": "网络和存储管理",
+        "articles": [
+          {
+            "id": "article-3-1",
+            "title": "网络配置",
+            "slug": "wangluo-peizhi",
+            "sections": [
+              {
+                "id": "section-3-1-1",
+                "title": "容器网络模式",
+                "prompt": "介绍 Docker 中的网络模式，包括桥接模式、主机模式等，帮助读者理解容器网络。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-3-1-2",
+                "title": "网络管理工具",
+                "prompt": "讲解常用的 Docker 网络管理工具，帮助读者更好地管理容器网络。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "id": "article-3-2",
+            "title": "存储管理",
+            "slug": "cunchu-guanli",
+            "sections": [
+              {
+                "id": "section-3-2-1",
+                "title": "数据卷管理",
+                "prompt": "介绍 Docker 中数据卷的管理方法，包括创建、删除、挂载等操作。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-3-2-2",
+                "title": "存储驱动",
+                "prompt": "讲解 Docker 的存储驱动类型和选择原则，帮助读者合理选择存储方案。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chapter-4",
+        "title": "容器编排和集群管理",
+        "articles": [
+          {
+            "id": "article-4-1",
+            "title": "Docker Compose",
+            "slug": "docker-compose",
+            "sections": [
+              {
+                "id": "section-4-1-1",
+                "title": "Compose 文件结构",
+                "prompt": "介绍 Docker Compose 文件的结构和语法规则，帮助读者编写 Compose 配置文件。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-4-1-2",
+                "title": "服务编排",
+                "prompt": "讲解如何使用 Docker Compose 进行服务编排，实现多个容器的协同工作。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "id": "article-4-2",
+            "title": "Docker Swarm",
+            "slug": "docker-swarm",
+            "sections": [
+              {
+                "id": "section-4-2-1",
+                "title": "Swarm 模式",
+                "prompt": "详细介绍 Docker Swarm 的工作原理和使用方法，帮助读者搭建容器集群。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-4-2-2",
+                "title": "集群管理",
+                "prompt": "讲解 Docker Swarm 的集群管理功能，包括节点管理、服务管理等内容。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chapter-5",
+        "title": "Docker 与持续集成/持续部署",
+        "articles": [
+          {
+            "id": "article-5-1",
+            "title": "持续集成",
+            "slug": "chixu-jicheng",
+            "sections": [
+              {
+                "id": "section-5-1-1",
+                "title": "集成工具",
+                "prompt": "介绍 Docker 与常用的持续集成工具的集成方法，帮助读者实现自动化构建。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-5-1-2",
+                "title": "持续部署",
+                "prompt": "讲解如何使用 Docker 实现持续部署，自动化部署应用程序。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "id": "article-5-2",
+            "title": "CI/CD 流程",
+            "slug": "cicd-liucheng",
+            "sections": [
+              {
+                "id": "section-5-2-1",
+                "title": "CI/CD 概念",
+                "prompt": "详细介绍持续集成和持续部署的概念和流程，帮助读者理解 CI/CD 的重要性。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-5-2-2",
+                "title": "工作流配置",
+                "prompt": "讲解如何配置 CI/CD 工作流，实现自动化测试和部署。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chapter-6",
+        "title": "镜像的构建与管理",
+        "articles": [
+          {
+            "id": "article-6-1",
+            "title": "Docker 镜像",
+            "slug": "docker-jingxiang",
+            "sections": [
+              {
+                "id": "section-6-1-1",
+                "title": "构建镜像",
+                "prompt": "介绍如何构建 Docker 镜像，包括使用 Dockerfile、镜像层等内容。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-6-1-2",
+                "title": "镜像管理",
+                "prompt": "讲解如何管理 Docker 镜像，包括查看、删除、推送镜像等操作。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "id": "article-6-2",
+            "title": "私有仓库",
+            "slug": "siyou-cangku",
+            "sections": [
+              {
+                "id": "section-6-2-1",
+                "title": "搭建私有仓库",
+                "prompt": "详细介绍如何搭建 Docker 私有仓库，保护自己的镜像资源。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-6-2-2",
+                "title": "私有仓库管理",
+                "prompt": "讲解私有仓库的管理方法，包括用户权限管理、镜像推送等内容。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chapter-7",
+        "title": "Dockerfile 详解",
+        "articles": [
+          {
+            "id": "article-7-1",
+            "title": "Dockerfile 基础",
+            "slug": "dockerfile-jichu",
+            "sections": [
+              {
+                "id": "section-7-1-1",
+                "title": "Dockerfile 概述",
+                "prompt": "介绍 Dockerfile 的基本语法和结构，帮助读者编写 Docker 镜像构建文件。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-7-1-2",
+                "title": "指令详解",
+                "prompt": "讲解 Dockerfile 中常用的指令，如 FROM、RUN、COPY 等，帮助读者理解指令作用。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "id": "article-7-2",
+            "title": "高级特性",
+            "slug": "gaoji-texing",
+            "sections": [
+              {
+                "id": "section-7-2-1",
+                "title": "多阶段构建",
+                "prompt": "详细介绍 Docker 多阶段构建的原理和用法，帮助读者优化镜像构建流程。",
+                "content": "",
+                "summary": ""
+              },
+              {
+                "id": "section-7-2-2",
+                "title": "缓存机制",
+                "prompt": "讲解 Docker 构建过程中的缓存机制，帮助读者提高构建效率。",
+                "content": "",
+                "summary": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
