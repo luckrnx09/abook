@@ -1,18 +1,7 @@
 import * as path from 'path';
-const pkg = require('../package.json');
+import {pkg} from './pkg';
 
-export const BOOK_OUTPUT_DIR = path.resolve(
-  process.cwd(),
-  `.${pkg.name}`,
-  'books'
-);
-export const IDEA_OUTPUT_DIR = path.resolve(
-  process.cwd(),
-  `.${pkg.name}`,
-  'ideas'
-);
-export const OUTLINE_OUTPUT_DIR = path.resolve(
-  process.cwd(),
-  `.${pkg.name}`,
-  'outlines'
-);
+const BOOK_OUTPUT_DIR = path.resolve(process.cwd(), `.${pkg.name}`, 'books');
+const IDEA_OUTPUT_DIR = path.resolve(process.cwd(), `.${pkg.name}`, 'ideas');
+
+export {BOOK_OUTPUT_DIR, IDEA_OUTPUT_DIR};

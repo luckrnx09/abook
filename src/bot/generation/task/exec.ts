@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {BookSchema, Task, TaskResult} from '../types';
+import {BookSchema, Task, TaskResult} from '../../../types';
 import {GenerateArticleSummaryTaskHandler} from './handler/article-summary';
 import {BaseHandler} from './handler/base';
 import {GenerateChapterSummaryTaskHandler} from './handler/chapter-summary';

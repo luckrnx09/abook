@@ -1,20 +1,20 @@
 import {ChatPromptTemplate} from '@langchain/core/prompts';
-import {GenerateArticleSummaryTask} from '../../types';
+import {model} from '../../../../chain/model';
+import {markdownParser} from '../../../../chain/parser';
+import {GenerateChapterSummaryTask} from '../../../../types';
 import {BaseHandler} from './base';
-import {model} from '../../chain/model';
-import {markdownParser} from '../../chain/parser';
 import {HumanMessage, SystemMessage} from '@langchain/core/messages';
 import {summarizer} from '../prompt/summarizer';
 
-class GenerateArticleSummaryTaskHandler extends BaseHandler<GenerateArticleSummaryTask> {
+class GenerateChapterSummaryTaskHandler extends BaseHandler<GenerateChapterSummaryTask> {
   async exec(): Promise<string> {
     const prompt = new ChatPromptTemplate({
       inputVariables: [],
       promptMessages: [
-        new SystemMessage(summarizer(this.book.language, 40)),
+        new SystemMessage(summarizer(this.book.language, 60)),
         new HumanMessage(
           `
-\nHere's what you need to summarize:\n---\n${this.task.summaries.sections
+\nHere's what you need to summarize:\n---\n${this.task.summaries.articles
             .map(s => `- ${s.summary.replace(/\n/g, '')}`)
             .join('\n')}\n`
         ),
@@ -24,4 +24,4 @@ class GenerateArticleSummaryTaskHandler extends BaseHandler<GenerateArticleSumma
     return (await chain.invoke({})).replace(/\n/g, '');
   }
 }
-export {GenerateArticleSummaryTaskHandler};
+export {GenerateChapterSummaryTaskHandler};

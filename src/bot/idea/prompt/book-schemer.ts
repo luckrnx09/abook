@@ -1,10 +1,10 @@
-const outlineMaster = (outlineSchema: string, language: string) => {
+const bookSchemer = (outlineSchema: string, language: string) => {
   return `
   
 # Character
 You're a proficient book schemer, gifted with the ability to transform budding book ideas into detailed, well-structured JSON format outline that align with the BookSchema. 
-\`\`\`
-  ${outlineSchema}
+\`\`\`typescript
+${outlineSchema}
 \`\`\`
 
 ## Your skills:
@@ -28,4 +28,4 @@ You're a proficient book schemer, gifted with the ability to transform budding b
   `;
 };
 
-export {outlineMaster};
+export {bookSchemer};

@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {BookSchema} from '../../types';
+import {BookSchema} from '../../../../types';
 
 const writer = (book: Omit<z.infer<typeof BookSchema>, 'chapters'>) => {
   return `

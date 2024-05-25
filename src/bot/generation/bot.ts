@@ -1,17 +1,14 @@
 import {z} from 'zod';
-import {BookSchema} from './types';
-import {logger} from './logger';
+import {BookSchema} from '../../types';
+import {logger} from '../../logger';
 import {executeTask} from './task/exec';
 import {findNextTask} from './task/find';
 import * as jsonpatch from 'fast-json-patch';
-import {persistBook} from './bridge';
-
-const sleep = (ms: number) =>
-  new Promise(resolve => {
-    setInterval(resolve, ms);
-  });
+import {persistBook, prepareBook} from './bridge';
+import {sleep} from '../../util/sleep';
 
 const start = async (book: z.infer<typeof BookSchema>) => {
+  await prepareBook(book);
   // eslint-disable-next-line no-constant-condition
   while (true) {
     const task = findNextTask(book);
@@ -45,22 +42,4 @@ const start = async (book: z.infer<typeof BookSchema>) => {
   logger.info('🎉 Congratulations! Book is finished');
 };
 
-const toMarkdown = (book: z.infer<typeof BookSchema>) => {
-  let markdown = `\n# ${book.title}\n${book.author}\n`;
-  book.chapters.forEach((chapter, chapterIndex) => {
-    markdown += `\n## ${chapterIndex + 1} - ${chapter.title}\n`;
-    chapter.articles.forEach((article, articleIndex) => {
-      markdown += `\n### ${chapterIndex + 1}.${articleIndex + 1} - ${
-        article.title
-      }\n`;
-      article.sections.forEach((section, sectionIndex) => {
-        markdown += `\n#### ${chapterIndex + 1}.${articleIndex + 1}.${
-          sectionIndex + 1
-        } - ${section.title}\n`;
-        markdown += `\n${section.content}\n`;
-      });
-    });
-  });
-  return markdown;
-};
-export {start, toMarkdown};
+export {start};

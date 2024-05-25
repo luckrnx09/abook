@@ -1,13 +1,15 @@
-import {Command, program} from 'commander';
-import {ideaCommand} from './idea-cmd';
-import {outlineCommand} from './outline-cmd';
-const pkg = require('../../package.json');
+import {program} from 'commander';
+import {commands} from './commands';
+import {pkg} from '../pkg';
+import {IDEA_OUTPUT_DIR} from '../constants';
 
 const {name, description, version} = pkg;
 program
   .name(name)
-  .description(description)
-  .version(version)
-  .addCommand(ideaCommand)
-  .addCommand(outlineCommand)
-  .parse(process.argv);
+  .description(
+    `An AI powered tool for generating any books from scratch\nData Stored in: \n${IDEA_OUTPUT_DIR}`
+  )
+  .version(version);
+
+commands.forEach(cmd => program.addCommand(cmd));
+program.parse(process.argv);

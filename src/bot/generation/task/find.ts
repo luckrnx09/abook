@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {BookSchema, Task} from '../types';
+import {BookSchema, Task} from '../../../types';
 
 const hasValue = (str: string | undefined) => {
   return typeof str === 'string' && str.trim().length > 0;

@@ -17,6 +17,9 @@
     "pretest": "yarn run compile",
     "posttest": "yarn run lint"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -31,6 +34,7 @@
     "@langchain/openai": "^0.0.33",
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
+    "console-table-printer": "^2.12.0",
     "dotenv-cli": "^7.4.2",
     "fast-json-patch": "^3.1.1",
     "langchain": "^0.2.0",

@@ -1,7 +1,7 @@
 import {HumanMessage, SystemMessage} from '@langchain/core/messages';
-import {model} from '../../chain/model';
-import {markdownParser} from '../../chain/parser';
-import {GenerateSectionContentTask} from '../../types';
+import {model} from '../../../../chain/model';
+import {markdownParser} from '../../../../chain/parser';
+import {GenerateSectionContentTask} from '../../../../types';
 import {BaseHandler} from './base';
 
 import {ChatPromptTemplate} from '@langchain/core/prompts';

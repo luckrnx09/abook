@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {BookSchema, Task} from '../../types';
+import {BookSchema, Task} from '../../../../types';
 
 abstract class BaseHandler<T extends Task> {
   constructor(

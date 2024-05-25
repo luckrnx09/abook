@@ -1,8 +1,8 @@
 import {ChatPromptTemplate} from '@langchain/core/prompts';
-import {GenerateSectionSummaryTask} from '../../types';
+import {GenerateSectionSummaryTask} from '../../../../types';
 import {BaseHandler} from './base';
-import {model} from '../../chain/model';
-import {markdownParser} from '../../chain/parser';
+import {model} from '../../../../chain/model';
+import {markdownParser} from '../../../../chain/parser';
 import {SystemMessage, HumanMessage} from '@langchain/core/messages';
 import {summarizer} from '../prompt/summarizer';
 
