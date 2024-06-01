@@ -1,3 +1,3 @@
 export * from './books';
 export * from './tasks';
-export * from './idea';
+export * from './ideas';

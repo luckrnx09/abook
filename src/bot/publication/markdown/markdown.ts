@@ -8,13 +8,7 @@ const markdown = (book: z.infer<typeof BookSchema>) => {
     chapter.articles.forEach((article, articleIndex) => {
       markdown += `\n### ${chapterIndex + 1}.${articleIndex + 1} - ${
         article.title
-      }\n`;
-      article.sections.forEach((section, sectionIndex) => {
-        markdown += `\n#### ${chapterIndex + 1}.${articleIndex + 1}.${
-          sectionIndex + 1
-        } - ${section.title}\n`;
-        markdown += `\n${section.content}\n`;
-      });
+      }\n${article.content}\n`;
     });
   });
   return markdown;

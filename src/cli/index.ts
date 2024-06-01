@@ -1,9 +1,15 @@
-import {program} from 'commander';
-import {commands} from './commands';
+import {Command, program} from 'commander';
 import {pkg} from '../pkg';
 import {IDEA_OUTPUT_DIR} from '../constants';
+import {command as ls} from './commands/ls';
+import {command as _new} from './commands/new';
+import {command as outline} from './commands/outline';
+import {command as publish} from './commands/publish';
+import {command as rm} from './commands/rm';
+import {command as run} from './commands/run';
+const commands: Command[] = [ls, _new, outline, publish, rm, run];
 
-const {name, description, version} = pkg;
+const {name, version} = pkg;
 program
   .name(name)
   .description(

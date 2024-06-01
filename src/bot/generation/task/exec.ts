@@ -3,12 +3,10 @@ import {BookSchema, Task, TaskResult} from '../../../types';
 import {GenerateArticleSummaryTaskHandler} from './handler/article-summary';
 import {BaseHandler} from './handler/base';
 import {GenerateChapterSummaryTaskHandler} from './handler/chapter-summary';
-import {GenerateSectionContentTaskHandler} from './handler/section-content';
-import {GenerateSectionSummaryTaskHandler} from './handler/section-summary';
+import {GenerateArticleContentTaskHandler} from './handler/article-content';
 
 const handlerConstructors: Record<Task['type'], typeof BaseHandler<Task>> = {
-  'section-content': GenerateSectionContentTaskHandler,
-  'section-summary': GenerateSectionSummaryTaskHandler,
+  'article-content': GenerateArticleContentTaskHandler,
   'article-summary': GenerateArticleSummaryTaskHandler,
   'chapter-summary': GenerateChapterSummaryTaskHandler,
 };

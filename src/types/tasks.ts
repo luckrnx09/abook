@@ -1,28 +1,22 @@
 import {z} from 'zod';
-import {SectionSchema} from './books';
+import {ArticleSchema} from './books';
 
-interface GenerateSectionContentTask {
-  type: 'section-content';
+interface GenerateArticleContentTask {
+  type: 'article-content';
   summaries: {
     chapters: {number: number; summary: string}[];
-    previousSectionsOfCurrentArticle: {number: number; summary: string}[];
   };
-  article: {number: number; title: string};
   chapter: {number: number; title: string};
-  section: {number: number} & Omit<z.infer<typeof SectionSchema>, 'content'>;
-  path: string;
-}
-
-interface GenerateSectionSummaryTask {
-  type: 'section-summary';
-  content: string;
+  previousArticlesOfCurrentChapter: {number: number; title: string}[];
+  article: {number: number} & Omit<z.infer<typeof ArticleSchema>, 'content'>;
   path: string;
 }
 
 interface GenerateArticleSummaryTask {
   type: 'article-summary';
-  summaries: {
-    sections: {number: number; summary: string}[];
+  article: {
+    number: number;
+    content: string;
   };
   path: string;
 }
@@ -36,8 +30,7 @@ interface GenerateChapterSummaryTask {
 }
 
 type Task =
-  | GenerateSectionContentTask
-  | GenerateSectionSummaryTask
+  | GenerateArticleContentTask
   | GenerateArticleSummaryTask
   | GenerateChapterSummaryTask;
 
@@ -54,8 +47,7 @@ type TaskResult = SuccessTaskResult | FailTaskResult;
 export {
   GenerateArticleSummaryTask,
   GenerateChapterSummaryTask,
-  GenerateSectionContentTask,
-  GenerateSectionSummaryTask,
+  GenerateArticleContentTask,
   Task,
   TaskResult,
 };

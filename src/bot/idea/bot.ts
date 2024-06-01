@@ -4,8 +4,7 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 import {bookSchemer} from './prompt/book-schemer';
 import {z} from 'zod';
-import {IdeaSchema} from '../../types';
-import {BookSchema} from '../../types';
+import {BookSchema, IdeaSchema} from '../../types';
 import {model} from '../../chain/model';
 import {markdownParser} from '../../chain/parser';
 import {logger} from '../../util/logger';
@@ -19,11 +18,11 @@ const start = async (idea: z.infer<typeof IdeaSchema>) => {
       new SystemMessage(bookSchemer(idea.language)),
       new HumanMessage(
         `
-        \nHere's the BookSchema:
+        \nHere's the \`BookSchema\`: 
 \`\`\`typescript
 ${schema}
 \`\`\`
-        \nHere's the information about the book:\n\`\`\`json\n${JSON.stringify(
+        \nHere's the book idea:\n\`\`\`json\n${JSON.stringify(
           idea,
           null,
           2

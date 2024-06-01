@@ -14,9 +14,7 @@ class GenerateArticleSummaryTaskHandler extends BaseHandler<GenerateArticleSumma
         new SystemMessage(summarizer(this.book.language, 40)),
         new HumanMessage(
           `
-\nHere's what you need to summarize:\n---\n${this.task.summaries.sections
-            .map(s => `- ${s.summary.replace(/\n/g, '')}`)
-            .join('\n')}\n`
+\nHere's what you need to summarize:\n---\n${this.task.article.content}\n`
         ),
       ],
     });
