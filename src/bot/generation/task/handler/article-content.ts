@@ -1,4 +1,4 @@
-import {HumanMessage, SystemMessage} from '@langchain/core/messages';
+import {AIMessage, HumanMessage, SystemMessage} from '@langchain/core/messages';
 import {model} from '../../../../chain/model';
 import {markdownParser} from '../../../../chain/parser';
 import {GenerateArticleContentTask} from '../../../../types';
@@ -41,9 +41,7 @@ You are currently in Chapter ${this.task.chapter.number}, Article ${
   
 You should write directly without any headings. Ensure your writing is focused, detailed, and descriptive, avoiding vague notions. Don't think about writing length limitations, prioritize clarity to engage a diverse audience, showcasing your exceptional writing ability.
   
-Based on the information above, please strictly follow the requirements below to complete the writing ${
-          this.task.article.number
-        }.
+Based on the information above, please strictly follow the requirements below to complete the article.
 Requirements: ${
           this.task.article.prompt?.length ? this.task.article.prompt : 'N/A'
         }
@@ -51,8 +49,25 @@ Requirements: ${
       ],
     });
 
-    const chain = prompt.pipe(model).pipe(markdownParser);
-    return await chain.invoke({});
+    let content = '';
+    let currentParagraph = 0;
+    // eslint-disable-next-line no-constant-condition
+    while (true) {
+      const chain = prompt.pipe(model).pipe(markdownParser);
+      const paragraph = await chain.invoke({});
+      if (paragraph === 'DONE' || currentParagraph >= 10) {
+        break;
+      } else {
+        content += '\n' + paragraph;
+        prompt.promptMessages.push(
+          new AIMessage(`<RESPONSE>${paragraph}</RESPONSE>`)
+        );
+        prompt.promptMessages.push(new HumanMessage('Continue writing'));
+      }
+      console.log('currentParagraph', currentParagraph);
+      currentParagraph++;
+    }
+    return content;
   }
 }
 export {GenerateArticleContentTaskHandler};
