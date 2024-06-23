@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import {Command, program} from 'commander';
 import {pkg} from '../pkg';
 import {IDEA_OUTPUT_DIR} from '../constants';

@@ -2,8 +2,9 @@
   "name": "abook",
   "version": "1.0.0",
   "description": "<h1 align=\"center\">⚡ abook⚡</h1> <p align=\"center\"> An AI powered command-line tool for generating any books from scratch</p>",
-  "main": "dist/index.js",
-  "bin": "dist/index.js",
+  "bin": {
+    "abook": "dist/index.js"
+  },
   "scripts": {
     "lint": "gts lint",
     "clean": "gts clean",
