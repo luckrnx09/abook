@@ -20,31 +20,31 @@ Run `cp .env.example .env` then fill the `.env` file:
 ### Install
 You can install `abook` as a global command as following: 
 ```bash
-yarn global add abook
+yarn global add @luckrnx09/abook
 ```
 or
 ```bash
-npm install -g abook
+npm install -g @luckrnx09/abook
 ```
 or
 ```bash
-pnpm install -g abook
+pnpm install -g @luckrnx09/abook
 ```
 Then you can use `abook -V` to print the abook version installed.
 
 If you don't want to install it globally, you can use `npx` to run abook directly: 
 ```bash
-npx abook
+npx @luckrnx09/abook
 ```
 ### Usage
 |command|description|
 |--|--|
  | ls              |list all the ideas|
  | new             |create an idea|
- | outline <idea>  |generate outline from an idea|
- | publish <idea>  |convert book content to markdown|
- | rm <idea>       |remove an idea|
- | run <idea>      |generate book content from an idea with outline|
+ | outline \<idea\>  |generate outline from an idea|
+ | publish \<idea\>  |convert book content to markdown|
+ | rm \<idea\>       |remove an idea|
+ | run \<idea\>      |generate book content from an idea with outline|
  | help [command]  |display help for command|
 
 ## Develop
