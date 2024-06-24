@@ -9,13 +9,13 @@ Here is a book written based on abook:
 📚 **Python Guide for JavaScript Engineers** | [Read it online](http://luckrnx09.com/python-guide-for-javascript-engineers/)
 </div>
 
-## Quick start 🚀
+## Getting started
 ### Prepare
 Run `cp .env.example .env` then fill the `.env` file:
 - OPENAI_API_KEY: Required, string, type your open api key
 - OPENAI_MODEL: Required, string, type your open ai model name
 - OPENAI_BASE_URL: Optional, string, type your custom openai api url
-- VERBOSE: Optional, `true` or `false`, determine whether or not to print dialog details when interacting with openai
+- VERBOSE: Optional, `true` or `false`, determine whether or not to print conversation details when interacting with openai
 
 ### Install
 You can install `abook` as a global command as following: 
@@ -36,7 +36,7 @@ If you don't want to install it globally, you can use `npx` to run abook directl
 ```bash
 npx abook
 ```
-### Commands
+### Usage
 |command|description|
 |--|--|
  | ls              |list all the ideas|
@@ -46,10 +46,14 @@ npx abook
  | rm <idea>       |remove an idea|
  | run <idea>      |generate book content from an idea with outline|
  | help [command]  |display help for command|
-|--|--|
 
+## Develop
+TODO
 
-🎉 Enjoy it!
+## Contribute
+Any code enhancements, documentation updates, unit tests are welcome.
 
-## License 📝
-[MIT](LICENSE)
+Any changes that alter functionality, please submit an issue first.
+
+## License
+This project is under [MIT](LICENSE) license
