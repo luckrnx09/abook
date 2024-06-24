@@ -1,0 +1,13 @@
+{
+    "verbose": true,
+    "ignore": [
+        "*.test.tsx?",
+        "*.json",
+        "**/fixtures/**",
+        ".abook"
+    ],
+    "execMap": {
+        "rb": "ruby",
+        "pde": "processing --sketch={{pwd}} --run"
+    }
+}

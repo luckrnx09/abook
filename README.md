@@ -1,130 +1,59 @@
 <h1 align="center">⚡ abook⚡</h1>
 <p align="center">
-An AI writer for programming books that instruct developers to move easily from the acquired tech stack or program language to another
+An AI powered command-line tool for generating any books from scratch
 </p>
 
 <div align="center">
 Here is a book written based on abook:
 
-📚 **Python Guide for JavaScript Engineers**: [Draft](example/Python%20for%20Web%20Developers:%20A%20Practical%20Guide) | [Read it online](http://luckrnx09.com/python-guide-for-javascript-engineers/)
+📚 **Python Guide for JavaScript Engineers** | [Read it online](http://luckrnx09.com/python-guide-for-javascript-engineers/)
 </div>
 
-## Quick start 🚀
-Notice: abook relies on [langchain](https://python.langchain.com/docs/get_started/introduction), we recommend to use Python 3.9+
+## Getting started
+### Prepare
+Run `cp .env.example .env` then fill the `.env` file:
+- OPENAI_API_KEY: Required, string, type your open api key
+- OPENAI_MODEL: Required, string, type your open ai model name
+- OPENAI_BASE_URL: Optional, string, type your custom openai api url
+- VERBOSE: Optional, `true` or `false`, determine whether or not to print conversation details when interacting with openai
 
-1. Clone the repository
-
+### Install
+You can install `abook` as a global command as following: 
 ```bash
-git clone https://github.com/luckrnx09/abook.git
-cd abook
+yarn global add abook
 ```
-
-2. Install the dependencies
-
-You should install [poetry](https://python-poetry.org/docs/basic-usage/#initialising-a-pre-existing-project) first, then run command:  
+or
 ```bash
-poetry install
+npm install -g abook
 ```
-
-3. Edit the `.env` file
+or
 ```bash
-vi .env
+pnpm install -g abook
 ```
-Set the `OPENAI_API_KEY`and `OPENAI_MODEL` variables
+Then you can use `abook -V` to print the abook version installed.
+
+If you don't want to install it globally, you can use `npx` to run abook directly: 
 ```bash
-OPENAI_API_KEY=<your-api-key> # If not filled in, OPENAI_API_KEY will be read from the environment variable.
-OPENAI_MODEL=<model-name> # Since generating books consumes more tokens, it is recommended to use a model with a larger context, defaulting to the ’gpt-3.5-turbo-16k‘
+npx abook
 ```
+### Usage
+|command|description|
+|--|--|
+ | ls              |list all the ideas|
+ | new             |create an idea|
+ | outline <idea>  |generate outline from an idea|
+ | publish <idea>  |convert book content to markdown|
+ | rm <idea>       |remove an idea|
+ | run <idea>      |generate book content from an idea with outline|
+ | help [command]  |display help for command|
 
+## Develop
+TODO
 
-4. Prepare a book `metadata.json`
+## Contribute
+Any code enhancements, documentation updates, unit tests are welcome.
 
-You can handwrite a JSON-formatted book catalog
-```json
-{
-  "title": "Python for Web Developers: A Practical Guide",
-  "source": "JavaScript",
-  "target": "Python",
-  "catalogs": [
-    {
-      "title": "Part 1: Python Basics",
-      "chapters": [
-        {
-          "title": "Chapter 1 - Environment Setup",
-          "articles": [
-            {
-              "title": "1. Python Installation",
-              "type": "environment",
-              "requirements": []
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
-It says a book called "Python for Web Developers: A Practical Guide" is going to be written to teach JavaScript engineers to learn Python quickly, and articles listed in catalogs will be created later.
+Any changes that alter functionality, please submit an issue first.
 
-You can see a full example [metadata.json](example/metadata.json).
-
-Also, you can use ChatGPT to generate one, with prompts along the following:
-
----
-
-You are working on a new book that instruct JavaScript engineer to learn Python, please generate a catalogs for me with JSON format.
-Here is an example:
-
-```json
-{
-  "title": "Book title",
-  "source": "JavaScript",
-  "target": "Python",
-  "catalogs": [
-    {
-      "title": "Part title",
-      "chapters": [
-        {
-          "title": "Chapter title",
-          "articles": [
-            {
-              "title": "1. Article title",
-              "type": "comparison", 
-              "requirements": []
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
-
----
-
-The value of `article.type` can be: 
-- environment: For articles are related to environment setup
-- comparison: For articles instruct knowledge to readers by compare `source` and `target`
-- cli: For articles instruct a command line tool
-- resource: For articles to list the 3rd-party resources
-
-The value of `article.requirements` is a string array. Any special requirements for writing can be added into it.
-
-5. Run abook
-```shell
-poetry run python ./main.py <path-to-metadata.json>
-```
-
-AI may not write the book all at once (consider network connectivity, request frequency limitations, etc.).
-
-You can run this command above again when some articles written failed.
-
-It will automatically skip the articles that have already been written.
-
-Finally, the book will save to the `.book` folder.
-
-🎉 Enjoy it!
-
-## License 📝
-
-[MIT](LICENSE)
+## License
+This project is under [MIT](LICENSE) license
