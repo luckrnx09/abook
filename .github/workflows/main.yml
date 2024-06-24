@@ -8,9 +8,6 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node: [18, 20, 22]
-    permissions:
-      contents: read
-      id-token: write
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +25,9 @@ jobs:
   publish:
     if: startsWith(github.ref, 'refs/tags')
     needs: build
+    permissions:
+      contents: read
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
