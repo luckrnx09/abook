@@ -12,8 +12,7 @@ class GenerateArticleContentTaskHandler extends BaseHandler<GenerateArticleConte
   async exec(): Promise<string> {
     const preface =
       this.task.summaries.chapters.length > 0
-        ? `You have already written covered several chapters but your current focus is on a particular article.
-Below is an overview of each chapter that you have already completed:
+        ? `You have already written covered several chapters and here are the overviews of them:
 ${this.task.summaries.chapters
   .map(c => `- Chapter ${c.number}: ${c.summary}`)
   .join('\n')}\n`
@@ -36,7 +35,7 @@ Here is the book information:
 - 🌐 Language: ${this.book.language}
 
 ${preface}
-You are currently in Chapter ${this.task.chapter.number}, Article ${
+You are currently in chapter ${this.task.chapter.number}, article ${
           this.task.article.number
         }. The information for the article you're writing is as follows:
 - It belongs to ${this.task.chapter.title} chapter${previousArticles}
