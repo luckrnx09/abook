@@ -1,6 +1,6 @@
 {
   "name": "@luckrnx09/abook",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "<h1 align=\"center\">⚡ abook⚡</h1> <p align=\"center\"> An AI powered command-line tool for generating any books from scratch</p>",
   "bin": {
     "abook": "dist/index.js"
@@ -58,8 +58,8 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^5.0.4",
-    "@langchain/core": "^0.2.0",
-    "@langchain/openai": "^0.0.33",
+    "@langchain/core": "^0.2.13",
+    "@langchain/openai": "^0.2.1",
     "commander": "^12.1.0",
     "console-table-printer": "^2.12.0",
     "dotenv-cli": "^7.4.2",
